@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppParking</string>
+    <string name="more">more</string>
+    <string name="impacted">Impacted</string>
+    <string name="Following" />
+    <string name="following">Following</string>
+    <string name="marca_coche">Marca Coche</string>
+    <string name="castell_n">Castellón</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="title_activity_google_maps">GoogleMaps</string>
+    <string name="parking_app">Parking App</string>
+    <string name="guardar_ubicaci_n_actual">Guardar Ubicación Actual</string>
+    <string name="title_activity_acceder_localizacion">AccederLocalizacion</string>
+</resources>

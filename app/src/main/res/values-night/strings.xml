@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parking_app">Parking App</string>
+    <string name="guardar_ubicaci_n_actual">Guardar Ubicación Actual</string>
+</resources>
