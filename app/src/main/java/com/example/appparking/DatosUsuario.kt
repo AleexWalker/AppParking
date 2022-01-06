@@ -51,10 +51,10 @@ class DatosUsuario : AppCompatActivity() {
     }
 
     private fun cargarAutoCompleteTextViewMarca() {
-        val marcas = resources.getStringArray(R.array.marcas)
+        val marcas = resources.getStringArray(R.array.marcascoche)
         val adapter = ArrayAdapter(this,
             android.R.layout.simple_dropdown_item_1line, marcas)
-        editTextCiudad.setAdapter(adapter)
+        editTextMarca.setAdapter(adapter)
     }
 
     private fun cargarAutoCompleteTextViewProvincia() {
