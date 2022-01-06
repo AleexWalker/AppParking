@@ -102,11 +102,12 @@
 
                 <TextView
                     android:id="@+id/textNombre"
-                    android:hint="Nombre"
+                    android:hint="@string/sin_determinar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/primary_text"
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"
+                    android:textAlignment="center"/>
 
             </LinearLayout>
 
@@ -139,8 +140,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/castell_n"
+                    android:hint="@string/sin_determinar"
                     android:textColor="@color/primary_text"
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"
+                    android:textAlignment="center"/>
 
             </LinearLayout>
 
@@ -172,9 +175,11 @@
                     android:id="@+id/textMarca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Opel"
+                    android:text="Marca"
+                    android:hint="@string/sin_determinar"
                     android:textColor="@color/primary_text"
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"
+                    android:textAlignment="center"/>
 
             </LinearLayout>
 

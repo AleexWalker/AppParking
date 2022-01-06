@@ -9,7 +9,9 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import kotlinx.android.synthetic.main.activity_datos_usuario.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.linearLayoutPrincipal
 import kotlinx.android.synthetic.main.item_1.*
 import kotlinx.android.synthetic.main.item_2.*
 import kotlinx.android.synthetic.main.item_3.*
@@ -25,6 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         layoutInflater.inflate(R.layout.activity_main, linearLayoutPrincipal, false)
 
+        cargarDatosUsuario()
+
+        /**
+         *
+         *
+         *
+         */
         val datosUsuario = findViewById<CardView>(R.id.cardHeader)
         datosUsuario.setOnClickListener {
             val lanzarDatosUsuario = Intent(this, DatosUsuario::class.java)
@@ -79,22 +88,25 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val layoutCuarto = findViewById<ConstraintLayout>(R.id.cuartoItem)
+        layoutCuarto.setOnClickListener {
+            intent = Intent(this, Pruebas::class.java)
+            startActivity(intent)
+        }
+
         añadirHorasLayouts()
-        cargarDatosUsuario()
     }
 
     private fun cargarDatosUsuario() {
-        val bundle = intent.extras
-        val nombre = bundle?.getString("nombre")
-        val ciudad = bundle?.getString("ciudad")
-        val marca = bundle?.getString("marca")
-
-        if (nombre != null && ciudad != null && marca != null) {
-            setContentView(R.layout.activity_main)
-            textNombre.text = nombre
-            textCiudad.text = ciudad
-            textMarca.text = marca
-        }
+        /**
+         * Parámetros de main_activity
+         * @param textNombre : TextView
+         * @param textCiudad : TextView
+         * @param textMarca : TextView
+         */
+        textNombre.text = cargarNombreUsuario()
+        textCiudad.text = cargarCiudadUsuario()
+        textMarca.text = cargarMarcaUsuario()
     }
 
     private fun guardarCoordenadas(latitudGuardada : Double, longitudGuardada : Double) {
@@ -139,5 +151,26 @@ class MainActivity : AppCompatActivity() {
 
     private fun getCurrentTime(): String {
         return SimpleDateFormat("EEEE, HH:mm", Locale.getDefault()).format(Date())
+    }
+
+    private fun cargarNombreUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("nombre", null)
+    }
+
+    private fun cargarCiudadUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("ciudad", null)
+    }
+
+    private fun cargarMarcaUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("marca", null)
     }
 }

@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppParking">
         <activity
+            android:name=".Pruebas"
+            android:exported="true" />
+        <activity
             android:name=".DatosUsuario"
             android:exported="true" />
         <!--

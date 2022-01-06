@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +22,9 @@ class DatosUsuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_usuario)
 
+        cargarAutoCompleteTextView()
+        cargarDatosUsuario()
+
         var nombre = ""
         var ciudad = ""
         var marca = ""
@@ -33,7 +38,7 @@ class DatosUsuario : AppCompatActivity() {
                 ciudad = editTextCiudad.text.toString()
                 marca = editTextMarca.text.toString()
 
-                val sharedPreferences : SharedPreferences = getSharedPreferences("datosUsuario", Context.MODE_PRIVATE)
+                val sharedPreferences : SharedPreferences = getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
                 val editor : SharedPreferences.Editor = sharedPreferences.edit()
                 editor.apply {
                     putString("nombre", nombre)
@@ -45,6 +50,46 @@ class DatosUsuario : AppCompatActivity() {
                 startActivity(volverMain)
             }
         }
+    }
+
+    private fun cargarAutoCompleteTextView() {
+        val provincias = resources.getStringArray(R.array.provincias)
+        val adapter = ArrayAdapter(this,
+        android.R.layout.simple_dropdown_item_1line, provincias)
+        editTextCiudad.setAdapter(adapter)
+    }
+
+    private fun cargarDatosUsuario() {
+        /**
+         * Parámetros de main_activity
+         * @param textNombreAjustes : TextView
+         * @param textCiudadAjustes : TextView
+         * @param textMarcaAjustes : TextView
+         */
+        textoNombreAjustes.text = cargarNombreUsuario()
+        textoCiudadAjustes.text = cargarCiudadUsuario()
+        textoMarcaAjustes.text = cargarMarcaUsuario()
+    }
+
+    private fun cargarNombreUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("nombre", null)
+    }
+
+    private fun cargarCiudadUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("ciudad", null)
+    }
+
+    private fun cargarMarcaUsuario() : String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("DatosUsuario", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getString("marca", null)
     }
 }
 
