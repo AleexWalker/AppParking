@@ -35,7 +35,9 @@
         app:cardCornerRadius="@dimen/_14sdp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/dashboard_item_5"
+        app:strokeWidth="@dimen/_2sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -45,18 +47,6 @@
             android:paddingTop="@dimen/_16sdp"
             android:paddingRight="@dimen/_16sdp"
             android:paddingBottom="@dimen/_16sdp">
-
-            <TextView
-                android:id="@+id/textAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="186"
-                android:textColor="@color/primary"
-                android:textSize="@dimen/_14ssp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/textTitle"
@@ -85,12 +75,13 @@
                 android:id="@+id/textLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="Castellón de la Plana"
                 android:textColor="@color/secondary_text"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageLocation"
                 app:layout_constraintStart_toEndOf="@+id/imageLocation"
-                app:layout_constraintTop_toTopOf="@+id/imageLocation"/>
+                app:layout_constraintTop_toTopOf="@+id/imageLocation" />
 
             <TextView
                 android:id="@+id/textTime_4"

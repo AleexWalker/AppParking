@@ -6,23 +6,21 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_ajustes_1.*
 import kotlinx.android.synthetic.main.item_ajustes_2.*
 import kotlinx.android.synthetic.main.item_ajustes_3.*
 import kotlinx.android.synthetic.main.activity_datos_usuario.*
-import java.io.Serializable
 
 class DatosUsuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_usuario)
 
-        cargarAutoCompleteTextView()
+        cargarAutoCompleteTextViewProvincia()
+        cargarAutoCompleteTextViewMarca()
         cargarDatosUsuario()
 
         var nombre = ""
@@ -52,7 +50,14 @@ class DatosUsuario : AppCompatActivity() {
         }
     }
 
-    private fun cargarAutoCompleteTextView() {
+    private fun cargarAutoCompleteTextViewMarca() {
+        val marcas = resources.getStringArray(R.array.marcas)
+        val adapter = ArrayAdapter(this,
+            android.R.layout.simple_dropdown_item_1line, marcas)
+        editTextCiudad.setAdapter(adapter)
+    }
+
+    private fun cargarAutoCompleteTextViewProvincia() {
         val provincias = resources.getStringArray(R.array.provincias)
         val adapter = ArrayAdapter(this,
         android.R.layout.simple_dropdown_item_1line, provincias)

@@ -18,7 +18,7 @@
         layout="@layout/item_google_maps"
         android:id="@+id/item_google_maps"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_75sdp"
+        android:layout_height="@dimen/_55sdp"
 
         android:layout_marginLeft="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"

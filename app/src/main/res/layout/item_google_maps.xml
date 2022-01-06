@@ -33,7 +33,9 @@
         app:cardCornerRadius="@dimen/_14sdp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/dashboard_item_1"
+        app:strokeWidth="@dimen/_2sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -62,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_marginRight="@dimen/_8sdp"
-                android:text="Guardar Geolocalización"
+                android:text="Guardar Localización del Coche"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/_8ssp"
                 app:layout_constraintEnd_toStartOf="@+id/textAmount"
