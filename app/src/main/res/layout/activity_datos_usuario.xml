@@ -105,6 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:hint="@string/sin_determinar"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/_12ssp"/>
 
@@ -139,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:text="@string/castell_n"
+                    android:hint="@string/sin_determinar"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/_12ssp"/>
 
@@ -174,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:text="Opel"
+                    android:hint="@string/sin_determinar"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/_12ssp"/>
 

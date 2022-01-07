@@ -8,7 +8,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
-        app:cardBackgroundColor="@color/dashboard_item_1"
+        app:cardBackgroundColor="@color/dashboard_item_3"
         app:cardCornerRadius="@dimen/_14sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/dashboard_item_1"
+        app:strokeColor="@color/dashboard_item_3"
         app:strokeWidth="@dimen/_2sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_marginRight="@dimen/_8sdp"
-                android:text="Guardar Localización del Coche"
+                android:text="Buscar Parkings Cercanos"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/_8ssp"
                 app:layout_constraintEnd_toStartOf="@+id/textAmount"

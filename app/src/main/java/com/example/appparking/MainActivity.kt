@@ -30,9 +30,7 @@ class MainActivity : AppCompatActivity() {
         cargarDatosUsuario()
 
         /**
-         *
-         *
-         *
+         * Lanzamos la activity_datos_usuario para que nuestro cliente realice los cambios que considere necesarios
          */
         val datosUsuario = findViewById<CardView>(R.id.cardHeader)
         datosUsuario.setOnClickListener {
@@ -88,6 +86,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        /**
+         * En cuanto el usuario interactue con dicho layout lo mandamos a la clase de Parking
+         * @param layoutTercero : Parámetro que hace referencia al Layout item_3 insertado en el activity_main.xml
+         */
+        val layoutTercero = findViewById<ConstraintLayout>(R.id.tercerItem)
+        layoutTercero.setOnClickListener {
+            intent = Intent(this, Parking::class.java)
+            startActivity(intent)
+        }
+
+        /**
+         * En cuanto el usuario interactue con dicho layout lo mandamos a la clase de Pruebas
+         * @param layoutTercero : Parámetro que hace referencia al Layout item_3 insertado en el activity_main.xml
+         */
         val layoutCuarto = findViewById<ConstraintLayout>(R.id.cuartoItem)
         layoutCuarto.setOnClickListener {
             intent = Intent(this, Pruebas::class.java)
