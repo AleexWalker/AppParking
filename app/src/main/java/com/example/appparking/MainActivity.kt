@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
          */
         val layoutTercero = findViewById<ConstraintLayout>(R.id.tercerItem)
         layoutTercero.setOnClickListener {
-            intent = Intent(this, Parking::class.java)
+            intent = Intent(this, ParkingLocation::class.java)
             startActivity(intent)
         }
 

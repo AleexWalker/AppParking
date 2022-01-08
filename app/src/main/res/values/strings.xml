@@ -79,5 +79,7 @@
     </string-array>
     <string name="title_activity_parking">Parking</string>
     <string name="title_activity_prueba_parking">PruebaParking</string>
+    <string name="API_KEY">AIzaSyBjvU3YH-HThCaJuNwuMJiUSLSZN65V_L4</string>
+    <string name="title_activity_parking_location">ParkingLocation</string>
 </resources>
 
