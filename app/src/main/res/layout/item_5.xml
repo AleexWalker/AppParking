@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_marginRight="@dimen/_8sdp"
-                android:text="Guardar Geolocalización"
+                android:text="| Menu Ampliación 2 |"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintEnd_toStartOf="@+id/textAmount"
@@ -84,7 +84,7 @@
                 app:layout_constraintTop_toTopOf="@+id/imageLocation" />
 
             <TextView
-                android:id="@+id/textTime_4"
+                android:id="@+id/textTime_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hora"

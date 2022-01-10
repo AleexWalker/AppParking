@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.item_1.*
 import kotlinx.android.synthetic.main.item_2.*
 import kotlinx.android.synthetic.main.item_3.*
 import kotlinx.android.synthetic.main.item_4.*
+import kotlinx.android.synthetic.main.item_5.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -149,6 +150,7 @@ class MainActivity : AppCompatActivity() {
         textTime_2.text = getCurrentTime()
         textTime_3.text = getCurrentTime()
         textTime_4.text = getCurrentTime()
+        textTime_5.text = getCurrentTime()
     }
 
     private fun obtenerDatosLatitud(): Double? {
